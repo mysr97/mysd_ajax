@@ -138,7 +138,6 @@
 
 
 /*여기부터 main_m2*/
-
 #main_m2 {
     padding: 80px 0;
     max-width: 100%;
@@ -152,4 +151,147 @@
     letter-spacing: -.01em;
     color: #242424;
     margin-bottom: 24px;
+}
+
+.main_m2_text > p {
+    font-size: 22px;
+    line-height: 160%;
+    letter-spacing: -.6px;
+    color: #555;
+}
+
+.main_m2_s {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 50px auto 0;
+}
+
+.main_m2_s > h5 {
+    width: 85%;
+    text-align: left;
+    padding: 40px 0 ;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.s_wr {
+    width: 85%;
+    margin: 0 auto;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-around;
+}
+
+.s_wr > div {
+    width: 13%;
+    height: 200px;
+    background-color: olive
+}
+
+
+
+/*여기부터 main_m3*/
+#main_m3 {
+    padding: 80px 0;
+    max-width: 100%;
+    text-align: center;
+}
+
+.main_m3_text > h4 {
+    font-weight: 700;
+    font-size: 49px;
+    line-height: 130%;
+    letter-spacing: -.01em;
+    color: #242424;
+    margin-bottom: 24px;
+}
+
+.main_m3_text > p {
+    font-size: 22px;
+    line-height: 160%;
+    letter-spacing: -.6px;
+    color: #555;
+}
+
+.m3_btn {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    padding: 40px 0 ;
+}
+
+.m3_btn > button {
+    margin-right: 10px;
+    font-size: 14px;
+    background: transparent;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 6px 16px;
+    display: block;
+    border: 1px solid #242424;
+    border-radius: 100px;
+}
+
+
+
+/*여기부터 main_m4*/
+#main_m4 {
+    padding: 80px 0;
+    max-width: 100%;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+.main_m4_text > h4 {
+    font-weight: 700;
+    font-size: 49px;
+    line-height: 130%;
+    letter-spacing: -.01em;
+    color: #242424;
+    margin-bottom: 24px;
+}
+
+.main_m4_text > p {
+    font-size: 22px;
+    line-height: 160%;
+    letter-spacing: -.6px;
+    color: #555;
+}
+
+.main_m4_motion {
+    width: 50%;
+    height: 500px;
+    margin: 50px auto 0;
+    background-color: aqua;
+}
+
+
+
+
+/*여기부터 main_m5*/
+#main_m5 {
+    padding: 80px 0;
+    max-width: 100%;
+    text-align: center;
+    background-color: #ffeb60;
+}
+
+.main_m5_text > h4 {
+    font-weight: 700;
+    font-size: 49px;
+    line-height: 130%;
+    letter-spacing: -.01em;
+    color: #242424;
+    margin-bottom: 24px;
+}
+
+.main_m5_text > p {
+    font-size: 22px;
+    line-height: 160%;
+    letter-spacing: -.6px;
+    color: #555;
 }
