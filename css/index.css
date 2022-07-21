@@ -179,6 +179,7 @@
 
 .s_wr {
     width: 85%;
+    height: 250px;
     margin: 0 auto;
     background-color: aqua;
     display: flex;
@@ -199,6 +200,7 @@
     max-width: 100%;
     text-align: center;
 }
+
 
 .main_m3_text > h4 {
     font-weight: 700;
@@ -221,7 +223,7 @@
     margin: 0 auto;
     display: flex;
     align-items: flex-start;
-    padding: 40px 0 ;
+    padding: 40px 0;
 }
 
 .m3_btn > button {
@@ -233,7 +235,22 @@
     padding: 6px 16px;
     display: block;
     border: 1px solid #242424;
+    color: #242424;
     border-radius: 100px;
+}
+
+.active {
+    background: #242424 !important;
+    color: #fff !important;
+}
+
+.main_m3_s {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 auto ;
+    overflow:hidden;
 }
 
 

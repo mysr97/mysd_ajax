@@ -7,13 +7,16 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
-    rel="stylesheet">
+        rel="stylesheet">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    
     <title>ajax</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
 </head>
 
 <body>
@@ -73,56 +76,151 @@
         
             <div class="main_m2_s">
                 <h5>지금 서점 베스트 셀러</h5>
-                <div class="s_wr">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                <div class="s_wr s_wr1">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
                 </div>
             </div>
         
             <div class="main_m2_s">
                 <h5>한 달 이내 출간된 책</h5>
-                <div class="s_wr">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                <div class="s_wr s_wr2">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
                 </div>
             </div>
         
             <div class="main_m2_s">
                 <h5>오디오북 BEST</h5>
-                <div class="s_wr">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                <div class="s_wr s_wr3">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
                 </div>
             </div>
         
             <div class="main_m2_s">
                 <h5>밀리 독점 오리지널 로맨스</h5>
-                <div class="s_wr">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                <div class="s_wr s_wr4">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
                 </div>
             </div>
         </div>
+
+
+        <script>
+            $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: { query: "베스트" },
+                headers: { Authorization: "KakaoAK 68458040d8171cb815dcc1c2195a4a2f" }
+            })
+                .done(function (msg) {
+
+                    var boxs = document.getElementsByClassName('box');
+
+                    for (var i = 0; i < boxs.length; i++) {
+
+                        $(".s_wr1 > .box").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
+                        $(".s_wr1 > .box").eq(i).append("<h3>" + '<a href="sub2.html">' + msg.documents[i].title + "</a>" + "</h3>");
+                        $(".s_wr1 > .box").eq(i).append(msg.documents[i].authors);
+
+
+                        var str = msg.documents[i].contents;
+                        var str2 = str.substring(0, 60);
+
+                    }
+                });
+
+            $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: { query: "신작소설" },
+                headers: { Authorization: "KakaoAK 68458040d8171cb815dcc1c2195a4a2f" }
+            })
+                .done(function (msg) {
+
+                    var boxs = document.getElementsByClassName('box');
+
+                    for (var i = 0; i < boxs.length; i++) {
+
+                        $(".s_wr2 > .box").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
+                        $(".s_wr2 > .box").eq(i).append("<h3>" + '<a href="sub2.html">' + msg.documents[i].title + "</a>" + "</h3>");
+                        $(".s_wr2 > .box").eq(i).append(msg.documents[i].authors);
+
+
+                        var str = msg.documents[i].contents;
+                        var str2 = str.substring(0, 60);
+
+                    }
+                });
+
+            $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: { query: "오디오북" },
+                headers: { Authorization: "KakaoAK 68458040d8171cb815dcc1c2195a4a2f" }
+            })
+                .done(function (msg) {
+
+                    var boxs = document.getElementsByClassName('box');
+
+                    for (var i = 0; i < boxs.length; i++) {
+
+                        $(".s_wr3 > .box").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
+                        $(".s_wr3 > .box").eq(i).append("<h3>" + '<a href="sub2.html">' + msg.documents[i].title + "</a>" + "</h3>");
+                        $(".s_wr3 > .box").eq(i).append(msg.documents[i].authors);
+
+
+                        var str = msg.documents[i].contents;
+                        var str2 = str.substring(0, 60);
+
+                    }
+            });
+
+        $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: { query: "로맨스" },
+                headers: { Authorization: "KakaoAK 68458040d8171cb815dcc1c2195a4a2f" }
+            })
+                .done(function (msg) {
+
+                    var boxs = document.getElementsByClassName('box');
+
+                    for (var i = 0; i < boxs.length; i++) {
+
+                        $(".s_wr4 > .box").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
+                        $(".s_wr4 > .box").eq(i).append("<h3>" + '<a href="sub2.html">' + msg.documents[i].title + "</a>" + "</h3>");
+                        $(".s_wr4 > .box").eq(i).append(msg.documents[i].authors);
+
+
+                        var str = msg.documents[i].contents;
+                        var str2 = str.substring(0, 60);
+
+                    }
+        });
+        </script>
 
         <div id="main_m3">
             <div class="main_m3_text">
@@ -134,25 +232,250 @@
                 </p>
             </div>
 
+
+            <div class="m3_btn">
+                <button class="active">주식</button>
+                <button>영어</button>
+                <button>고전</button>
+                <button>인테리어</button>
+                <button>다이어트</button>
+            </div>
+
             <div class="main_m3_s">
-                <div class="m3_btn">
-                    <button>주식</button>
-                    <button>영어</button>
-                    <button>고전</button>
-                    <button>인테리어</button>
-                    <button>다이어트</button>
+            
+                <div class="s_wr s_wr5">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
                 </div>
-                <div class="s_wr">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+
+                <div class="s_wr s_wr6">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
                 </div>
+
+                <div class="s_wr s_wr7">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+
+                <div class="s_wr s_wr8">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+
+                <div class="s_wr s_wr9">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+
             </div>
         </div>
+
+
+        <script>
+            $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: { query: "주식" },
+                headers: { Authorization: "KakaoAK 68458040d8171cb815dcc1c2195a4a2f" }
+            })
+                .done(function (msg) {
+
+                    var boxs = document.getElementsByClassName('box');
+
+                    for (var i = 0; i < boxs.length; i++) {
+
+                        $(".s_wr5 > .box").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
+                        $(".s_wr5 > .box").eq(i).append("<h3>" + '<a href="sub2.html">' + msg.documents[i].title + "</a>" + "</h3>");
+                        $(".s_wr5 > .box").eq(i).append(msg.documents[i].authors);
+
+
+                        var str = msg.documents[i].contents;
+                        var str2 = str.substring(0, 60);
+
+                    }
+                });
+
+            $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: { query: "영어" },
+                headers: { Authorization: "KakaoAK 68458040d8171cb815dcc1c2195a4a2f" }
+            })
+                .done(function (msg) {
+
+                    var boxs = document.getElementsByClassName('box');
+
+                    for (var i = 0; i < boxs.length; i++) {
+
+                        $(".s_wr6 > .box").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
+                        $(".s_wr6 > .box").eq(i).append("<h3>" + '<a href="sub2.html">' + msg.documents[i].title + "</a>" + "</h3>");
+                        $(".s_wr6 > .box").eq(i).append(msg.documents[i].authors);
+
+
+                        var str = msg.documents[i].contents;
+                        var str2 = str.substring(0, 60);
+
+                    }
+                });
+
+            $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: { query: "고전" },
+                headers: { Authorization: "KakaoAK 68458040d8171cb815dcc1c2195a4a2f" }
+            })
+                .done(function (msg) {
+
+                    var boxs = document.getElementsByClassName('box');
+
+                    for (var i = 0; i < boxs.length; i++) {
+
+                        $(".s_wr7 > .box").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
+                        $(".s_wr7 > .box").eq(i).append("<h3>" + '<a href="sub2.html">' + msg.documents[i].title + "</a>" + "</h3>");
+                        $(".s_wr7 > .box").eq(i).append(msg.documents[i].authors);
+
+
+                        var str = msg.documents[i].contents;
+                        var str2 = str.substring(0, 60);
+
+                    }
+            });
+
+        $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: { query: "인테리어" },
+                headers: { Authorization: "KakaoAK 68458040d8171cb815dcc1c2195a4a2f" }
+            })
+                .done(function (msg) {
+
+                    var boxs = document.getElementsByClassName('box');
+
+                    for (var i = 0; i < boxs.length; i++) {
+
+                        $(".s_wr8 > .box").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
+                        $(".s_wr8 > .box").eq(i).append("<h3>" + '<a href="sub2.html">' + msg.documents[i].title + "</a>" + "</h3>");
+                        $(".s_wr8 > .box").eq(i).append(msg.documents[i].authors);
+
+
+                        var str = msg.documents[i].contents;
+                        var str2 = str.substring(0, 60);
+
+                    }
+        });
+
+        $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: { query: "다이어트" },
+                headers: { Authorization: "KakaoAK 68458040d8171cb815dcc1c2195a4a2f" }
+            })
+                .done(function (msg) {
+
+                    var boxs = document.getElementsByClassName('box');
+
+                    for (var i = 0; i < boxs.length; i++) {
+
+                        $(".s_wr9 > .box").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
+                        $(".s_wr9 > .box").eq(i).append("<h3>" + '<a href="sub2.html">' + msg.documents[i].title + "</a>" + "</h3>");
+                        $(".s_wr9 > .box").eq(i).append(msg.documents[i].authors);
+
+
+                        var str = msg.documents[i].contents;
+                        var str2 = str.substring(0, 60);
+
+                    }
+        });
+        </script>
+
+<script>
+
+    $(function () {
+
+      //multipage
+      $('.m3_btn button:nth-of-type(1)').click(function () {
+        $(".m3_btn > button").removeClass("active");
+        $(this).addClass("active");
+        $('.s_wr5').show();
+        $('.s_wr6').hide();
+        $('.s_wr7').hide();
+        $('.s_wr8').hide();
+        $('.s_wr9').hide();
+      });
+
+      $('.m3_btn button:nth-of-type(2)').click(function () {
+        $(".m3_btn > button").removeClass("active");
+        $(this).addClass("active");
+        $('.s_wr5').hide();
+        $('.s_wr6').show();
+        $('.s_wr6').css("opacity", "1");
+        $('.s_wr7').hide();
+        $('.s_wr8').hide();
+        $('.s_wr9').hide();
+      });
+
+      $('.m3_btn button:nth-of-type(3)').click(function () {
+        $(".m3_btn > button").removeClass("active");
+        $(this).addClass("active");
+        $('.s_wr5').hide();
+        $('.s_wr6').hide();
+        $('.s_wr7').show();
+        $('.s_wr7').css("opacity", "1");
+        $('.s_wr8').hide();
+        $('.s_wr9').hide();
+      });
+
+      $('.m3_btn button:nth-of-type(4)').click(function () {
+        $(".m3_btn > button").removeClass("active");
+        $(this).addClass("active");
+        $('.s_wr5').hide();
+        $('.s_wr6').hide();
+        $('.s_wr7').hide();
+        $('.s_wr8').show();
+        $('.s_wr8').css("opacity", "1");
+        $('.s_wr9').hide();
+      });
+
+      $('.m3_btn button:nth-of-type(5)').click(function () {
+        $(".m3_btn > button").removeClass("active");
+        $(this).addClass("active");
+        $('.s_wr5').hide();
+        $('.s_wr6').hide();
+        $('.s_wr7').hide();
+        $('.s_wr8').hide();
+        $('.s_wr9').show();
+        $('.s_wr9').css("opacity", "1");
+      });
+
+    });
+
+  </script>
 
 
         <div id="main_m4">
