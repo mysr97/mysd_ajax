@@ -143,7 +143,7 @@
 
                         $(".s_wr1 > .box").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
                         $(".s_wr1 > .box").eq(i).append("<h3>" + '<a href="sub2.html">' + msg.documents[i].title + "</a>" + "</h3>");
-                        $(".s_wr1 > .box").eq(i).append(msg.documents[i].authors);
+                        $(".s_wr1 > .box").eq(i).append("<h4>" +msg.documents[i].authors+ "</h4>");
 
 
                         var str = msg.documents[i].contents;
@@ -166,7 +166,7 @@
 
                         $(".s_wr2 > .box").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
                         $(".s_wr2 > .box").eq(i).append("<h3>" + '<a href="sub2.html">' + msg.documents[i].title + "</a>" + "</h3>");
-                        $(".s_wr2 > .box").eq(i).append(msg.documents[i].authors);
+                        $(".s_wr2 > .box").eq(i).append("<h4>" +msg.documents[i].authors+ "</h4>");
 
 
                         var str = msg.documents[i].contents;
@@ -189,7 +189,7 @@
 
                         $(".s_wr3 > .box").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
                         $(".s_wr3 > .box").eq(i).append("<h3>" + '<a href="sub2.html">' + msg.documents[i].title + "</a>" + "</h3>");
-                        $(".s_wr3 > .box").eq(i).append(msg.documents[i].authors);
+                        $(".s_wr3 > .box").eq(i).append("<h4>" +msg.documents[i].authors+ "</h4>");
 
 
                         var str = msg.documents[i].contents;
@@ -212,7 +212,7 @@
 
                         $(".s_wr4 > .box").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
                         $(".s_wr4 > .box").eq(i).append("<h3>" + '<a href="sub2.html">' + msg.documents[i].title + "</a>" + "</h3>");
-                        $(".s_wr4 > .box").eq(i).append(msg.documents[i].authors);
+                        $(".s_wr4 > .box").eq(i).append("<h4>" +msg.documents[i].authors+ "</h4>");
 
 
                         var str = msg.documents[i].contents;
@@ -312,7 +312,7 @@
 
                         $(".s_wr5 > .box").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
                         $(".s_wr5 > .box").eq(i).append("<h3>" + '<a href="sub2.html">' + msg.documents[i].title + "</a>" + "</h3>");
-                        $(".s_wr5 > .box").eq(i).append(msg.documents[i].authors);
+                        $(".s_wr5 > .box").eq(i).append("<h4>" +msg.documents[i].authors+ "</h4>");
 
 
                         var str = msg.documents[i].contents;
@@ -335,7 +335,7 @@
 
                         $(".s_wr6 > .box").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
                         $(".s_wr6 > .box").eq(i).append("<h3>" + '<a href="sub2.html">' + msg.documents[i].title + "</a>" + "</h3>");
-                        $(".s_wr6 > .box").eq(i).append(msg.documents[i].authors);
+                        $(".s_wr6 > .box").eq(i).append("<h4>" +msg.documents[i].authors+ "</h4>");
 
 
                         var str = msg.documents[i].contents;
@@ -358,7 +358,7 @@
 
                         $(".s_wr7 > .box").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
                         $(".s_wr7 > .box").eq(i).append("<h3>" + '<a href="sub2.html">' + msg.documents[i].title + "</a>" + "</h3>");
-                        $(".s_wr7 > .box").eq(i).append(msg.documents[i].authors);
+                        $(".s_wr7 > .box").eq(i).append("<h4>" +msg.documents[i].authors+ "</h4>");
 
 
                         var str = msg.documents[i].contents;
@@ -381,7 +381,7 @@
 
                         $(".s_wr8 > .box").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
                         $(".s_wr8 > .box").eq(i).append("<h3>" + '<a href="sub2.html">' + msg.documents[i].title + "</a>" + "</h3>");
-                        $(".s_wr8 > .box").eq(i).append(msg.documents[i].authors);
+                        $(".s_wr8 > .box").eq(i).append("<h4>" +msg.documents[i].authors+ "</h4>");
 
 
                         var str = msg.documents[i].contents;
@@ -404,7 +404,7 @@
 
                         $(".s_wr9 > .box").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
                         $(".s_wr9 > .box").eq(i).append("<h3>" + '<a href="sub2.html">' + msg.documents[i].title + "</a>" + "</h3>");
-                        $(".s_wr9 > .box").eq(i).append(msg.documents[i].authors);
+                        $(".s_wr9 > .box").eq(i).append("<h4>" +msg.documents[i].authors+ "</h4>");
 
 
                         var str = msg.documents[i].contents;
@@ -416,9 +416,20 @@
 
 <script>
 
+    $(window).on("scroll", function () {
+        var ms = $("body, html").offset().top - 100;
+
+        if ($(window).scrollTop() >= ms) {
+            $('.s_wr5').show();
+            $('.s_wr6').hide();
+            $('.s_wr7').hide();
+            $('.s_wr8').hide();
+            $('.s_wr9').hide();
+        }
+    });
+
     $(function () {
 
-      //multipage
       $('.m3_btn button:nth-of-type(1)').click(function () {
         $(".m3_btn > button").removeClass("active");
         $(this).addClass("active");
