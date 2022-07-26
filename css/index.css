@@ -614,7 +614,7 @@
     height: 366px;
     overflow: hidden;
     margin: -88px auto 0;
-    
+    box-shadow: 10px -10px 40px rgba(0,0,0,0.15);
 }
 
 .m7_text {
@@ -627,7 +627,13 @@
     font-weight: 500;
     letter-spacing: -2px;
 }
-
+.m7_text > p {
+    margin-top: 20px;
+    font-size: 22px;
+    line-height: 160%;
+    letter-spacing: -.6px;
+    color: #555;
+}
 
 /*여기부터 main_8*/
 #main_m8 {
