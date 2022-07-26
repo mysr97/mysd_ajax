@@ -598,7 +598,35 @@
     position: relative;
 }
 
+.m7_wr {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+}
+ .m7_video {
+    width: 60%;
+}
 
+.m7_video > div {
+    width: 366px;
+    height: 366px;
+    background-color: aqua;
+    margin: -88px auto 0;
+    
+}
+
+.m7_text {
+    width: 40%;
+    padding: 5% 0;
+}
+
+.m7_text > h5 {
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: -2px;
+}
 
 
 /*여기부터 main_8*/
