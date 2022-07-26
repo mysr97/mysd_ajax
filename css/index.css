@@ -612,7 +612,7 @@
 .m7_video > div {
     width: 366px;
     height: 366px;
-    background-color: aqua;
+    overflow: hidden;
     margin: -88px auto 0;
     
 }
