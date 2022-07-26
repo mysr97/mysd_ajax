@@ -11,7 +11,7 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 101;
 }
 
 #menu > .logo {
@@ -597,6 +597,7 @@
     background-position: 50%;
     position: relative;
 }
+
 
 
 
