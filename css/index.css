@@ -514,12 +514,14 @@
     background-color: #f7f7f7;
     position: absolute;
     top: 135px;
+    padding: 0 15%;
 }
 
 .m6_s_wr > .m6_s {
-    width: 85%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
+    justify-content: center;
 }
 
 .m6_s_wr > .m6_s > .m6_s_text {
@@ -527,10 +529,12 @@
     display: flex;
     flex-wrap: wrap;
     text-align: left;
+    margin: 0 0 0 5%;
+    
 }
 .m6_s_wr > .m6_s > .m6_s_text > img {
     height: 50px;
-    margin: 40% 0 0;
+    margin: 200px 0 0;
 }
 .m6_s_wr > .m6_s >  .m6_s_text > h5 {
     width: 100%;
@@ -550,7 +554,7 @@
 
 .m6_s_wr > .m6_s > .m6_s_slide {
     width: 45%;
-    padding: 10% 2%;
+    padding: 150px 2%;
 }
 .m6_s_wr > .m6_s > .m6_s_slide > img {
     width: 320px;
