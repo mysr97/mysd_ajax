@@ -543,6 +543,7 @@
     line-height: 130%;
     letter-spacing: -.01em;
     color: #242424;
+    margin-top: 50px;
 }
 .m6_s_wr > .m6_s > .m6_s_text > p {
     width: 100%;
@@ -551,9 +552,25 @@
     letter-spacing: -.6px;
     color: #555;
     height: auto;
+    margin-top: 20px;
 }
 .m6_s_wr > .m6_s > .m6_s_text > div {
     width: 100%;
+}
+.m6_btn1 {
+    width: 100%;
+    margin-top: 30px;
+}
+.m6_btn1 > button {
+    margin-right: 7px;
+    font-size: 12px;
+    background: transparent;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 3px 20px;
+    border: 1px solid #242424;
+    color: #242424;
+    border-radius: 100px;
 }
 
 
