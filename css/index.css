@@ -529,7 +529,7 @@
     text-align: left;
 }
 .m6_s_wr > .m6_s > .m6_s_text > img {
-    height: 7%;
+    height: 50px;
     margin: 40% 0 0;
 }
 .m6_s_wr > .m6_s >  .m6_s_text > h5 {
@@ -553,5 +553,5 @@
     padding: 10% 2%;
 }
 .m6_s_wr > .m6_s > .m6_s_slide > img {
-    width: 100%;
+    width: 320px;
 }
