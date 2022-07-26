@@ -525,14 +525,14 @@
 }
 
 .m6_s_wr > .m6_s > .m6_s_text {
-    width: 55%;
+    width: 60%;
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
     text-align: left;
-    margin: 0 0 0 5%;
-    
+    padding: 0 5%;
 }
 .m6_s_wr > .m6_s > .m6_s_text > img {
+    width: 50px;
     height: 50px;
     margin: 200px 0 0;
 }
@@ -546,6 +546,11 @@
 }
 .m6_s_wr > .m6_s > .m6_s_text > p {
     width: 100%;
+    font-size: 22px;
+    line-height: 160%;
+    letter-spacing: -.6px;
+    color: #555;
+    height: auto;
 }
 .m6_s_wr > .m6_s > .m6_s_text > div {
     width: 100%;
@@ -553,7 +558,7 @@
 
 
 .m6_s_wr > .m6_s > .m6_s_slide {
-    width: 45%;
+    width: 40%;
     padding: 150px 2%;
 }
 .m6_s_wr > .m6_s > .m6_s_slide > img {
