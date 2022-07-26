@@ -590,10 +590,30 @@
 /*여기부터 main_m7*/
 #main_m7 {
     width: 100%;
-    height: 500px;
+    height: 400px;
     background-image: url("../img/m7_bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
     position: relative;
+}
+
+
+
+/*여기부터 main_8*/
+#main_m8 {
+    width: 100%;
+    height: 560px;
+    background-color: #ffeb60;
+}
+
+
+
+
+/*여기부터 footer*/
+
+footer {
+    width: 100%;
+    height: 200px;
+    background-color: #fff
 }
