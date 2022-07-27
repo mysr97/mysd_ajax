@@ -509,6 +509,7 @@
     margin-top: 5px;
 }
 
+
 .m6_s_wr {
     width: 100%;
     background-color: #f7f7f7;
@@ -553,6 +554,11 @@
     height: auto;
     margin-top: 20px;
 }
+
+.m6_s_wr > .m6_s > .m6_s_text > p:first-line {
+    font-weight: 700;
+} /*첫줄강조*/
+
 .m6_s_wr > .m6_s > .m6_s_text > div {
     width: 100%;
 }
