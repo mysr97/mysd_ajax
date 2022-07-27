@@ -579,12 +579,27 @@
     padding: 150px 2%;
     position: relative;
 }
-.m6_s_wr > .m6_s > .m6_s_slide > img {
+.m6_s_wr > .m6_s > .m6_s_slide > .m6_s_slide_box {
+    width: 320px;
+    height: 660px;
+    position: relative;
+}
+.m6_s_wr > .m6_s > .m6_s_slide > .m6_s_slide_box > img {
     width: 320px;
     z-index: 100;
     position: relative;
 }
-
+.m6_s_wr > .m6_s > .m6_s_slide > .m6_s_slide_box > div {
+    width: 320px;
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.m6_s_wr > .m6_s > .m6_s_slide > .m6_s_slide_box > div > img {
+    height: 660px;
+    border-radius: 50px;
+}
 
 
 /*여기부터 main_m7*/
