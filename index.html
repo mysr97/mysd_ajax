@@ -17,14 +17,7 @@
     
     <title>ajax</title>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
-
-    <script>
-         $(function(){
-            $("#main_m8 > .m8_qna > div > div:nth-of-type(1) > img").click(function(){
-                $(this).parent().siblings().slideToggle(); // 클릭한 img의 부모의 형제를 찾아서 슬라이드 토글.
-            })
-         })
-    </script>
+    <script src="js/sr_one.js"></script>
 </head>
 
 <body>
@@ -608,8 +601,13 @@
                     <div class="m6_s_slide">
                         <div class="m6_s_slide_box">
                             <img src="img/m6_img_phone.png" alt="">
-                            <div>
-                                <img src="img/m6_slide1.png" alt="">
+                            <div class="inner">
+                                <div>
+                                    <img src="img/m6_slide1.png" alt="">
+                                    <video src="img/m6_slide2.mp4"></video>
+                                    <img src="img/m6_slide3.png" alt="">
+                                    <img src="img/m6_slide4.png" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
