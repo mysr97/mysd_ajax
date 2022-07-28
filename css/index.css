@@ -821,7 +821,7 @@ footer {
     justify-content: space-between;
     padding: 20px;
 }
-.f1 > div > p {
+.f1 > div > a {
     font-size: 16px;
     font-weight:500;
 }
