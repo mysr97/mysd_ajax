@@ -105,9 +105,11 @@
     color: transparent;
     text-indent: -9999px;
     background: url("../img/main_logo.png");
+    background-position: 0 500px;
     background-size: 178px;
     background-repeat: no-repeat;
     height: 47px;
+    opacity: 0;
 }
 
 
@@ -126,6 +128,9 @@
     letter-spacing: -.01em;
     color: #242424;
     margin-bottom: 24px;
+    position: relative;
+    top: 70px;
+    opacity: 0;
 }
 
 .main_m1_text > p {
@@ -133,6 +138,9 @@
     line-height: 160%;
     letter-spacing: -.6px;
     color: #555;
+    position: relative;
+    top: 60px;
+    opacity: 0;
 }
 
 .main_m1_slide {
@@ -197,6 +205,9 @@
     letter-spacing: -.01em;
     color: #242424;
     margin-bottom: 24px;
+    position: relative;
+    top: 70px;
+    opacity: 0;
 }
 
 .main_m2_text > p {
@@ -204,6 +215,9 @@
     line-height: 160%;
     letter-spacing: -.6px;
     color: #555;
+    position: relative;
+    top: 60px;
+    opacity: 0;
 }
 
 .main_m2_s {
@@ -267,6 +281,9 @@
     letter-spacing: -.01em;
     color: #242424;
     margin-bottom: 24px;
+    position: relative;
+    top: 70px;
+    opacity: 0;
 }
 
 .main_m3_text > p {
@@ -274,6 +291,9 @@
     line-height: 160%;
     letter-spacing: -.6px;
     color: #555;
+    position: relative;
+    top: 60px;
+    opacity: 0;
 }
 
 .m3_btn {
@@ -329,6 +349,9 @@
     letter-spacing: -.01em;
     color: #242424;
     margin-bottom: 24px;
+    position: relative;
+    top: 60px;
+    opacity: 0;
 }
 
 .main_m4_text > p {
@@ -336,6 +359,9 @@
     line-height: 160%;
     letter-spacing: -.6px;
     color: #555;
+    position: relative;
+    top: 60px;
+    opacity: 0;
 }
 
 .main_m4_motion {
@@ -396,6 +422,9 @@
     letter-spacing: -.01em;
     color: #242424;
     margin-bottom: 24px;
+    position: relative;
+    top: 70px;
+    opacity: 0;
 }
 
 .main_m5_text > p {
@@ -403,6 +432,9 @@
     line-height: 160%;
     letter-spacing: -.6px;
     color: #555;
+    position: relative;
+    top: 60px;
+    opacity: 0;
 }
 
 .main_m5_con {

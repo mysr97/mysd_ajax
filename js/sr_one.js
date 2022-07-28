@@ -139,8 +139,77 @@ $(function(){
         'background-position-x': '0%',
         'background-position-y': '0%'
     } ,900);
+
+    $(".main_t_text > h3").animate({
+        opacity : 1,
+        'background-position-x': '0%',
+        'background-position-y': '0%'
+    },500);
+    
  }); 
 
  //윈도우 스크롤 애니메이션
+$(window).on("scroll", function(){
 
- 
+    var m1 = $("#main_m1").offset().top -350;
+    var m2 = $("#main_m2").offset().top -350;
+    var m3 = $("#main_m3").offset().top -350;
+    var m4 = $("#main_m4").offset().top -350;
+    var m5 = $("#main_m5").offset().top -350;
+
+    if($(window).scrollTop() >= m1 ) {
+        $(".main_m1_text > h4").animate({
+            opacity : 1,
+            'top': '0'
+        },750);
+        $(".main_m1_text > p").animate({
+            opacity : 1,
+            'top': '0'
+        },550);
+    }
+
+    if($(window).scrollTop() >= m2 ) {
+        $(".main_m2_text > h4").animate({
+            opacity : 1,
+            'top': '0'
+        },750);
+        $(".main_m2_text > p").animate({
+            opacity : 1,
+            'top': '0'
+        },550);
+    }
+
+    if($(window).scrollTop() >= m3 ) {
+        $(".main_m3_text > h4").animate({
+            opacity : 1,
+            'top': '0'
+        },750);
+        $(".main_m3_text > p").animate({
+            opacity : 1,
+            'top': '0'
+        },550);
+    }
+    
+    if($(window).scrollTop() >= m4 ) {
+        $(".main_m4_text > h4").animate({
+            opacity : 1,
+            'top': '0'
+        },750);
+        $(".main_m4_text > p").animate({
+            opacity : 1,
+            'top': '0'
+        },550);
+    }
+
+    if($(window).scrollTop() >= m5 ) {
+        $(".main_m5_text > h4").animate({
+            opacity : 1,
+            'top': '0'
+        },750);
+        $(".main_m5_text > p").animate({
+            opacity : 1,
+            'top': '0'
+        },550);
+    }
+
+});
