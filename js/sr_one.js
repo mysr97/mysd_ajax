@@ -156,6 +156,8 @@ $(window).on("scroll", function(){
     var m3 = $("#main_m3").offset().top -350;
     var m4 = $("#main_m4").offset().top -350;
     var m5 = $("#main_m5").offset().top -350;
+    var m6 = $("#main_m6").offset().top -350;
+    var m7 = $("#main_m7").offset().top -450;
 
     if($(window).scrollTop() >= m1 ) {
         $(".main_m1_text > h4").animate({
@@ -207,6 +209,56 @@ $(window).on("scroll", function(){
             'top': '0'
         },750);
         $(".main_m5_text > p").animate({
+            opacity : 1,
+            'top': '0'
+        },550);
+    }
+
+
+    if($(window).scrollTop() >= m4 ) {
+        $(".main_m4_motion > div:nth-of-type(3)").stop().animate({
+            opacity : 1,
+            'top': '70%',
+            'width' : '450px'
+        },550);
+        $(".main_m4_motion > div:nth-of-type(4)").stop().animate({
+            opacity : 1,
+            'top': '45%',
+            'width' : '450px'
+        },550);
+        $(".main_m4_motion > div:nth-of-type(5)").stop().animate({
+            opacity : 1,
+            'top': '45%',
+            'width' : '450px'
+        },550);
+        $(".main_m4_motion > div:nth-of-type(6)").stop().animate({
+            opacity : 1,
+            'top': '70%',
+            'width' : '450px'
+        },550);
+    }
+
+    if($(window).scrollTop() >= m6 ) {
+        $(".m6_s_text > h5").animate({
+            opacity : 1,
+            'top': '0'
+        },550);
+        $(".m6_s_text > p:nth-of-type(1)").animate({
+            opacity : 1,
+            'top': '0'
+        },550);
+        $(".m6_s_slide_box").animate({
+            opacity : 1,
+            'top': '0'
+        },650);
+    }
+
+    if($(window).scrollTop() >= m7 ) {
+        $(".m7_text > h5").animate({
+            opacity : 1,
+            'top': '0'
+        },550);
+        $(".m7_text > p").animate({
             opacity : 1,
             'top': '0'
         },550);
