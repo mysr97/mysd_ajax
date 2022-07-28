@@ -105,6 +105,7 @@ $(function(){
         $(".m6_s1").show();
         $(".m6_btn1 > button:nth-of-type(1)").addClass("active");
         $(".inner > div").animate({left: 0},"fast");
+        $(".m6_s_text > p:nth-of-type(2)").html("하루의 시작과 마무리를 오디오북과 함께" + "<br/>" + "지하철에서도, 잠들기 전에도 독서하세요");
     });
     $(".m6_menu > li:nth-of-type(2)").click(function(){
         $(".m6_menu > li").removeClass("li_act");
@@ -114,6 +115,7 @@ $(function(){
         $(".m6_s2").show();
         $(".m6_btn1 > button:nth-of-type(1)").addClass("active");
         $(".inner > div").animate({left: 0},"fast");
+        $(".m6_s_text > p:nth-of-type(2)").html("시선 추적 기능" + "<br/>" + "눈동자로 페이지를 넘길 수 있어요");
     });
     $(".m6_menu > li:nth-of-type(3)").click(function(){
         $(".m6_menu > li").removeClass("li_act");
@@ -123,5 +125,6 @@ $(function(){
         $(".m6_s3").show();
         $(".m6_btn1 > button:nth-of-type(1)").addClass("active");
         $(".inner > div").animate({left: 0},"fast");
+        $(".m6_s_text > p:nth-of-type(2)").html("당신을 위한 추천" + "<br/>" + "키워드로 한 눈에 정리한 추천 도서");
     });
  });
