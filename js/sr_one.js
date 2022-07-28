@@ -2,7 +2,7 @@
 // qna
 $(function(){
     $("#main_m8 > .m8_qna > div > div:nth-of-type(1) > img").click(function(){
-        $(this).parent().siblings().slideToggle(); // 클릭한 img의 부모의 형제를 찾아서 슬라이드 토글.
+        $(this).parent().siblings().slideToggle("fast"); // 클릭한 img의 부모의 형제를 찾아서 슬라이드 토글.
     });
  });
 
@@ -151,13 +151,13 @@ $(function(){
  //윈도우 스크롤 애니메이션
 $(window).on("scroll", function(){
 
-    var m1 = $("#main_m1").offset().top -350;
-    var m2 = $("#main_m2").offset().top -350;
-    var m3 = $("#main_m3").offset().top -350;
-    var m4 = $("#main_m4").offset().top -350;
-    var m5 = $("#main_m5").offset().top -350;
-    var m6 = $("#main_m6").offset().top -350;
-    var m7 = $("#main_m7").offset().top -450;
+    var m1 = $("#main_m1").offset().top -450;
+    var m2 = $("#main_m2").offset().top -450;
+    var m3 = $("#main_m3").offset().top -450;
+    var m4 = $("#main_m4").offset().top -450;
+    var m5 = $("#main_m5").offset().top -450;
+    var m6 = $("#main_m6").offset().top -450;
+    var m7 = $("#main_m7").offset().top -500;
 
     if($(window).scrollTop() >= m1 ) {
         $(".main_m1_text > h4").animate({
