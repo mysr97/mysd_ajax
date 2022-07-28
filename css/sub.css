@@ -52,7 +52,10 @@
 }
 
 #sub_1 > .sub_1_top {
-    padding: 100px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 100px 20px 50px;
+    border-bottom: 1px solid #ddd;
 }
 #sub_1 > .sub_1_top > div > h2 {
     padding: 20px 0;
