@@ -19,9 +19,7 @@
     <title>밀리의 서재 - ajax</title>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
     <script src="js/sr_one.js"></script>
-    <script>
 
-    </script>
 </head>
 
 <body>
@@ -425,10 +423,8 @@
 
 <script>
 
-    $(window).on("scroll", function () {
-        var ms = $("body, html").offset().top - 100;
-
-        if ($(window).scrollTop() >= ms) {
+    $(function () {
+        if ($(window).scrollTop() >= 0) {
             $('.s_wr5').show();
             $('.s_wr6').hide();
             $('.s_wr7').hide();
@@ -442,7 +438,7 @@
       $('.m3_btn button:nth-of-type(1)').click(function () {
         $(".m3_btn > button").removeClass("active");
         $(this).addClass("active");
-        $('.s_wr5').show();
+        $('.s_wr5').fadeIn();
         $('.s_wr6').hide();
         $('.s_wr7').hide();
         $('.s_wr8').hide();
@@ -453,7 +449,7 @@
         $(".m3_btn > button").removeClass("active");
         $(this).addClass("active");
         $('.s_wr5').hide();
-        $('.s_wr6').show();
+        $('.s_wr6').fadeIn();
         $('.s_wr6').css("opacity", "1");
         $('.s_wr7').hide();
         $('.s_wr8').hide();
@@ -465,7 +461,7 @@
         $(this).addClass("active");
         $('.s_wr5').hide();
         $('.s_wr6').hide();
-        $('.s_wr7').show();
+        $('.s_wr7').fadeIn();
         $('.s_wr7').css("opacity", "1");
         $('.s_wr8').hide();
         $('.s_wr9').hide();
@@ -477,7 +473,7 @@
         $('.s_wr5').hide();
         $('.s_wr6').hide();
         $('.s_wr7').hide();
-        $('.s_wr8').show();
+        $('.s_wr8').fadeIn();
         $('.s_wr8').css("opacity", "1");
         $('.s_wr9').hide();
       });
@@ -489,7 +485,7 @@
         $('.s_wr6').hide();
         $('.s_wr7').hide();
         $('.s_wr8').hide();
-        $('.s_wr9').show();
+        $('.s_wr9').fadeIn();
         $('.s_wr9').css("opacity", "1");
       });
 
