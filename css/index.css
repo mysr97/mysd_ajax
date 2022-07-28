@@ -45,6 +45,27 @@
 }
 
 
+#fix_bt {
+    width: 450px;
+    text-align: center;
+    padding: 17px 20px;
+    border-radius: 50px;
+    background-color: #333;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    z-index: 102;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.16), 4px 8px 28px rgba(0,0,0,0.08);
+}
+
+#fix_bt > a {
+    color: #fff;
+    font-size: 15px;
+}
+
+/*여기부터 main_top*/
 #main_top {
     height: 820px;
     background: linear-gradient(#f8faff 67.5%,#f0f4ff 0);
