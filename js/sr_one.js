@@ -128,3 +128,19 @@ $(function(){
         $(".m6_s_text > p:nth-of-type(2)").html("당신을 위한 추천" + "<br/>" + "키워드로 한 눈에 정리한 추천 도서");
     });
  });
+
+
+
+ // 애니메이션
+
+ $(function(){
+    $(".main_t_text > h2").animate({
+        opacity : 1,
+        'background-position-x': '0%',
+        'background-position-y': '0%'
+    } ,900);
+ }); 
+
+ //윈도우 스크롤 애니메이션
+
+ 

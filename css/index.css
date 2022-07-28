@@ -91,10 +91,12 @@
 .main_t_text > h2 {
     font-size: 0;
     background-image: url("../img/main_text.png");
+    background-position: 0 700px;
     color: transparent;
     background-repeat: no-repeat;
     height: 223px;
     background-size: 346px;
+    opacity: 0;
 }
 
 .main_t_text > h3{
