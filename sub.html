@@ -33,6 +33,39 @@
             </div>
         </div>
 
+
+        <div id="sub_1">
+            <div class="sub_1_top">
+                <div class="box"></div>
+            </div>
+        </div>
+
+        <script>
+             $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: { query: "튜브" },
+                headers: { Authorization: "KakaoAK 68458040d8171cb815dcc1c2195a4a2f" }
+            })
+
+              .done(function (msg) {
+
+                    var boxs = document.getElementsByClassName('box');
+
+                    for (var i = 0; i < boxs.length; i++) {
+
+                        $(".sub_1_top > .box").eq(i).append("<h2>" + '<a href="sub2.html">' + msg.documents[i].title + "</a>" + "</h2>");
+                        $(".sub_1_top > .box").eq(i).append("<h4> 지은이 : " +msg.documents[i].authors+ "</h4>"+" ");
+                        $(".sub_1_top > .box").eq(i).append("<h4> / " +msg.documents[i].publisher+ "</h4>");
+
+
+                        var str = msg.documents[i].contents;
+                        var str2 = str.substring(0, 60);
+
+                    }
+                });
+        </script>
+
     </div>
     
 </body>
