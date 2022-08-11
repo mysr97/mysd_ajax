@@ -137,9 +137,26 @@
     margin: 0 auto;
     padding: 30px 0 20px;
     border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-flow: row wrap;
 }
 
+#sub_3 > div:nth-of-type(1), #sub_3 > div:nth-of-type(2) {
+    font-size: 1.5em;
+    line-height: 30px;
+}
+#sub_3 > ul {
+    width: 100%;
+}
+#sub_3 > ul > li {
+    float: left;
+    padding: 20px;
+}
 
+#sub_3 > div {
+    width: 100%;
+    padding: 20px;
+}
 
 /*여기부터 sub_4*/
 #sub_4 {
@@ -147,8 +164,11 @@
     margin: 0 auto;
     padding: 30px 0 20px;
     border-bottom: 1px solid #ddd;
+    padding: 20px;
 }
-
+#sub_4 > h4 {
+    font-size: 1.5em;
+}
 
 
 /*여기부터 sub_5*/
@@ -157,6 +177,12 @@
     margin: 0 auto;
     padding: 30px 0 20px;
     border-bottom: 1px solid #ddd;
+    padding: 20px;
+}
+
+#sub_5 > div {
+    font-size: 1.5em;
+    line-height: 70px;
 }
 
 #sub_5 > img {
@@ -169,11 +195,16 @@
 #sub_6 {
     width: 80%;
     margin: 0 auto;
-    padding: 30px 0 30px;
+    padding: 20px;
     border-bottom: 1px solid #ddd;
     height: 500px;
     overflow: hidden;
     position: relative;
+}
+
+#sub_6 > div {
+    font-size: 1.5em;
+    line-height: 70px;
 }
 
 #sub_6 > img {
