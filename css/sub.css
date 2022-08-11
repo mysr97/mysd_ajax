@@ -45,8 +45,8 @@
 
 
 
-/*여기부터 sub_1*/
 
+/*여기부터 sub_1*/
 #sub_1 {
     width: 100%;
 }
@@ -69,4 +69,22 @@
     font-size: 15px;
     font-weight: 300;
     display: inline-block;
+}
+
+
+
+
+/*여기부터 sub_2*/
+#sub_2 {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    padding: 50px 0 0;
+}
+.sub_2_img {
+    text-align: center;
+}
+.sub_2_img > img {
+    width: 80%;
+    box-shadow: 5px 10px 10px #ddd;
 }
