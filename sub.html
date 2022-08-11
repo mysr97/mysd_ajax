@@ -58,11 +58,15 @@
                         $(".sub_1_top > .box").eq(i).append("<h4> 지은이 : " +msg.documents[i].authors+ "</h4>"+" ");
                         $(".sub_1_top > .box").eq(i).append("<h4> / " +msg.documents[i].publisher+ "</h4>");
 
-
                         var str = msg.documents[i].contents;
                         var str2 = str.substring(0, 60);
-
                     }
+                });
+
+                $(function(){
+                    $.get("./txt/sub_text.txt", function(data){
+                        $("#sub_4").html(data);
+                    })
                 });
         </script>
 
@@ -82,15 +86,15 @@
                 <div class="left_text lt4">배송료</div>
                 <div class="right_text rt4">신간도서 단 1권도 무료</div>
 
-                <div class="s2_t">
+                <div class="s2_t s2_t1">
                     소설/시/희곡 주간 6위, 종합 top10 2주 | Sales Point : 66,020
                 </div>
-                <div class="s2_t">
+                <div class="s2_t s2_t2">
                     <a href="#">★★★★★ 9.7</a> <a href="#">100자평(25)</a>
                     <a href="#">리뷰(73)</a>
                 </div>
                 
-                <div class="s2_t">
+                <div class="s2_t s2_t3">
                     <div class="s2_btn1" style="background-color: #df307f;">장바구니 담기</div>
                     <div class="s2_btn2" style="background-color: #e24457;">바로구매</div>
                     <div class="s2_btn3" style="color: #e24457;">선물하기</div>
@@ -100,18 +104,52 @@
         </div>
 
         <div id="sub_3">
-
+            <div>기본정보</div>
+            <ul>
+                <li>276쪽</li>
+                <li>128*188mm (B6)</li>
+                <li>315g</li>
+                <li>ISBN : 9788936434625</li>
+            </ul>
+            <div>주제 분류</div>
+            <div>· 국내도서 > 소설/시/희곡 > 한국소설 > 2000년대 이후 한국소설</div>
         </div>
 
         <div id="sub_4">
             
         </div>
 
+        
+
         <div id="sub_5">
-            
+            <div>출판사 제공 카드리뷰</div>
+            <img src="img/sub_5_img.png" alt="">
         </div>
+
         <div id="sub_6">
-            
+            <div>출판사 제공 책소개</div>
+            <img src="img/sub_6_img.jpg" alt="">
+            <div class="s6_btn_wr">
+                <div class="s6_btn1">더보기</div>
+                <div class="s6_btn2">접기</div>
+            </div>
+
+        </div>
+
+        <script>
+            $(".s6_btn1").click(function(){
+                $("#sub_6").css("height","auto");
+                $(this).hide();
+                $(".s6_btn2").show();
+            });
+            $(".s6_btn2").click(function(){
+                $("#sub_6").css("height","500px");
+                $(this).hide();
+                $(".s6_btn1").show();
+            });
+        </script>
+
+        <div id="sub_7">
         </div>
     </div>
     

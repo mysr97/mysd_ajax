@@ -79,7 +79,8 @@
     width: 80%;
     margin: 0 auto;
     display: flex;
-    padding: 50px 0 0;
+    padding: 50px 0 50px;
+    border-bottom: 1px solid #ddd;
 }
 .sub_2_img {
     width: 50%;
@@ -112,7 +113,13 @@
     width: 100%;
     margin: 20px 0 0;
 }
-.sub_2_text > .s2_t > div {
+.sub_2_text > .s2_t1 {
+
+}
+.sub_2_text > .s2_t2 {
+
+}
+.sub_2_text > .s2_t3 > div {
     padding: 20px;
     margin: 5px 5px 0 0;
     float: left;
@@ -120,4 +127,93 @@
     cursor: pointer;
     color: #fff;
     font-weight: 500;
+}
+
+
+
+/*여기부터 sub_3*/
+#sub_3 {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 0 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+/*여기부터 sub_4*/
+#sub_4 {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 0 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+/*여기부터 sub_5*/
+#sub_5 {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 0 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+#sub_5 > img {
+    width: 50%;
+}
+
+
+
+/*여기부터 sub_6*/
+#sub_6 {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 0 30px;
+    border-bottom: 1px solid #ddd;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+#sub_6 > img {
+    width: 60%;
+}
+
+.s6_btn_wr {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+
+}
+.s6_btn1 {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: aliceblue;
+    box-shadow: 0px -20px 30px rgba(255, 255, 255, 0.9);
+    border: 1px solid #eee;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.s6_btn2 {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: aliceblue;
+    border: 1px solid #eee;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+    display: none;
+}
+
+/*여기부터 sub_7*/
+#sub_7 {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 0 30px;
+    border-bottom: 1px solid #ddd;
 }
