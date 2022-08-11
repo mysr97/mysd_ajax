@@ -86,7 +86,7 @@
     text-align: center;
 }
 .sub_2_img > img {
-    width: 80%;
+    width: 70%;
     box-shadow: 5px 10px 10px #ddd;
 }
 
@@ -98,6 +98,7 @@
 
 .sub_2_text > h3 {
     width: 100%;
+    color: mediumvioletred;
 }
 
 .sub_2_text > .left_text {
