@@ -96,10 +96,24 @@
     flex-flow: row wrap;
 }
 
+.sub_2_text > h3 {
+    width: 100%;
+}
+
 .sub_2_text > .left_text {
     width: 30%;
     font-weight: 500;
 }
 .sub_2_text > .right_text {
     width: 70%;
+}
+.sub_2_text > .s2_t {
+    width: 100%;
+}
+.sub_2_text > .s2_t > div {
+    padding: 20px;
+    margin: 5px;
+    float: left;
+    border: 1px solid #eee;
+    cursor: pointer;
 }
