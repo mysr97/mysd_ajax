@@ -68,6 +68,28 @@
                         $("#sub_4").html(data);
                     })
                 });
+
+                $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: { query: "신작" },
+                headers: { Authorization: "KakaoAK 68458040d8171cb815dcc1c2195a4a2f" }
+            })
+                .done(function (msg) {
+
+                    var boxs = document.getElementsByClassName('box');
+
+                    for (var i = 0; i < boxs.length; i++) {
+
+                        $(".s7_wr> .box").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
+                        $(".s7_wr > .box").eq(i).append("<h3>" + '<a href="sub2.html">' + msg.documents[i].title + "</a>" + "</h3>");
+
+
+                        var str = msg.documents[i].contents;
+                        var str2 = str.substring(0, 60);
+
+                    }
+        });
         </script>
 
         <div id="sub_2">
@@ -150,8 +172,58 @@
         </script>
 
         <div id="sub_7">
+            <div>이 상품을 구입하신 분들이 다음 상품도 구입하셨습니다.</div>
+
+            <div class="sub_7_slide">
+
+                <div class="s7_left">
+                    &lt; 
+                </div>
+                <div class="s7_wr">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+                <div class="s7_right">
+                    &gt;
+                </div>
+            </div>
         </div>
     </div>
     
+    <footer>
+        <div class="f1">
+            <div>
+                <a href="#">(주)밀리의 서재</a>
+            </div>
+            <div>
+                <img src="img/f_img1.png" alt="">
+                <img src="img/f_img2.png" alt="">
+                <img src="img/f_img3.png" alt="">
+                <img src="img/f_img4.png" alt="">
+                <img src="img/f_img5.png" alt="">
+            </div>
+        </div>
+        <div class="f2">
+            <div>사업자 정보 펼쳐보기 ▽</div>
+        </div>
+        <div class="f3">
+            <ul>
+                <li>이용약관 ></li>
+                <li>개인정보처리방침 ></li>
+                <li>청소년보호정책 ></li>
+                <li>B2B문의 ></li>
+                <li>콘텐츠 제휴문의 ></li>
+                <li>뷰어 다운로드 ></li>
+                <li>회사 소개 ></li>
+            </ul>
+        </div>
+        <div class="f4">
+            <p>Copyright © 2022 밀리의 서재 All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
