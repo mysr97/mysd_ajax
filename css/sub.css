@@ -110,11 +110,14 @@
 }
 .sub_2_text > .s2_t {
     width: 100%;
+    margin: 20px 0 0;
 }
 .sub_2_text > .s2_t > div {
     padding: 20px;
-    margin: 5px;
+    margin: 5px 5px 0 0;
     float: left;
-    border: 1px solid #eee;
+    border: 1px solid #e24457;
     cursor: pointer;
+    color: #fff;
+    font-weight: 500;
 }
