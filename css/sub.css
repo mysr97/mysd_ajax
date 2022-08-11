@@ -82,9 +82,24 @@
     padding: 50px 0 0;
 }
 .sub_2_img {
+    width: 50%;
     text-align: center;
 }
 .sub_2_img > img {
     width: 80%;
     box-shadow: 5px 10px 10px #ddd;
+}
+
+.sub_2_text {
+    width: 50%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.sub_2_text > .left_text {
+    width: 30%;
+    font-weight: 500;
+}
+.sub_2_text > .right_text {
+    width: 70%;
 }
