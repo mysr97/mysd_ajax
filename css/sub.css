@@ -246,7 +246,6 @@
     width: 80%;
     margin: 0 auto;
     padding: 30px 0 30px;
-    border-bottom: 1px solid #ddd;
 }
 
 #sub_7 > div:nth-of-type(1) {
@@ -309,6 +308,7 @@ footer {
     background-color: #fff;
     display: flex;
     flex-flow: column wrap;
+    border-top: 1px solid #ddd;
 }
 
 .f1 {
